@@ -78,6 +78,15 @@ namespace SistemaISLAGO.Catálogos
         protected global::System.Web.UI.WebControls.Button btnReturn;
 
         /// <summary>
+        /// Control btnInactivos.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnInactivos;
+
+        /// <summary>
         /// Control VistaListadoCategorias.
         /// </summary>
         /// <remarks>
@@ -87,12 +96,21 @@ namespace SistemaISLAGO.Catálogos
         protected global::System.Web.UI.WebControls.View VistaListadoCategorias;
 
         /// <summary>
-        /// Control Button1.
+        /// Control btnReturn1.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Button1;
+        protected global::System.Web.UI.WebControls.Button btnReturn1;
+
+        /// <summary>
+        /// Control btnInactivos1.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnInactivos1;
     }
 }

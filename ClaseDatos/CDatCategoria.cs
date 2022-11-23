@@ -97,7 +97,7 @@ namespace ClaseDatos
         }
         #endregion
 
-        #region Muestra Articulos por ID
+        #region Muestra Categorias por ID
         public CEntCategoria MuestraCategoriaxID(int id)
         {
             tblCategoria category = context.tblCategoria.FirstOrDefault(x => x.IDCategoria == id);

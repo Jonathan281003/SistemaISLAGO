@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net.Http.Headers;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -44,11 +45,51 @@ namespace ClaseNegocio
         }
         #endregion
 
-        #region Muestra X Cantidad 
+        #region Muestra X Cantidad proveedores
         public List<CEntProveedor> MuestraXCantidadd(int Cant)
         {
             CDatProveedor prov = new CDatProveedor();
             return prov.MuestraXCantidad(Cant);
+        }
+        #endregion
+
+        #region Muestra Proveedores Por ID
+        public CEntProveedor MuestraProveedoresxID(int id)
+        {
+            CDatProveedor prov = new CDatProveedor();
+            return prov.MuestraProveedoresxID(id);
+        }
+        #endregion
+
+        #region Dar de Baja Proveedor 
+        public bool bajaProveedor(int id)
+        {
+            CDatProveedor prov = new CDatProveedor();
+            return prov.bajaProveedor(id);
+        }
+        #endregion
+
+        #region Dar de Alta Proveedor
+        public bool altaProveedor(int id)
+        {
+            CDatProveedor prov = new CDatProveedor();
+            return prov.altaProveedor(id);
+        }
+        #endregion
+
+        #region Muestra Proveedores Inactivos
+        public List<CEntProveedor> MuestraProveedoresInactivos()
+        {
+            CDatProveedor prov = new CDatProveedor();
+            return prov.MuestraProveedoresInactivos();
+        }
+        #endregion
+
+        #region Muestra Proveedores Activos Por Nombre
+        public List<CEntProveedor> MuestraProveedoresxNombre(string nombre)
+        {
+            CDatProveedor prov = new CDatProveedor();
+            return prov.MuestraProveedoresxNombre(nombre);
         }
         #endregion
     }

@@ -63,17 +63,18 @@
         </asp:View>
         
         <asp:View ID="VistaAgregarCategoria" runat="server">
-            <center>
-                <div class="tab-pane" style="color:green; margin-top: 700px;">
-                    <h1>Nueva Categoria.</h1>
+                <div class="col-md-8" style="margin-top: 80px;">
+                    <h1 class="abc text-success" style="font-size: 50px;">Nueva Categoria</h1>
                 </div>
-            </center>
             <br />
 
             <%-- Boton para volver a la pagina principal --%>
             <div class="col-md-12">
-                <div class="col-md-2" style="margin-left: 950px">
-                    <asp:Button ID="btnReturn" OnClick="btnReturn_Click" runat="server" Text="Articulos Recientes" />
+                <div class="col-md-2" style="margin-left: 740px">
+                    <asp:Button ID="btnReturn" OnClick="btnReturn_Click" runat="server" Text="Categorias Recientes" style="padding: 5px; background: #5cb85c; color: white; border-style: none; border-radius: 5px;"/>
+                </div>
+                <div class="col-md-2">
+                    <asp:Button ID="btnInactivos" runat="server" Text="Categorias Inactivas" style="padding: 5px; background: #06c3e5; color: white; border-style: none; border-radius: 5px;" />
                 </div>
             </div>
 
@@ -89,8 +90,11 @@
 
             <%-- Boton para volver a la pagina principal --%>
             <div class="col-md-12">
-                <div class="col-md-2" style="margin-left: 950px">
-                    <asp:Button ID="Button1" OnClick="btnReturn_Click" runat="server" Text="Articulos Recientes" />
+                <div class="col-md-2" style="margin-left: 740px">
+                    <asp:Button ID="btnReturn1" OnClick="btnReturn_Click" runat="server" Text="Categorias Recientes" style="padding: 5px; background: #5cb85c; color: white; border-style: none; border-radius: 5px;"/>
+                </div>
+                <div class="col-md-2">
+                    <asp:Button ID="btnInactivos1" runat="server" Text="Categorias Inactivas" style="padding: 5px; background: #06c3e5; color: white; border-style: none; border-radius: 5px;" />
                 </div>
             </div>
 

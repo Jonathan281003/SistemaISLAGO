@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Linq.Expressions;
+using System.Net.Security;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -92,7 +94,7 @@ namespace ClaseDatos
         }
         #endregion
 
-        #region Muestra X Cantidad
+        #region Muestra X Cantidad de proveedores
         public List<CEntProveedor> MuestraXCantidad(int Cant)
         {
             var consulta = (from pro in context.tblProveedor
@@ -113,6 +115,103 @@ namespace ClaseDatos
                             }).Take(Cant).ToList();
             return consulta;
 
+        }
+        #endregion
+
+        #region Muestra proveedores por ID 
+        public CEntProveedor MuestraProveedoresxID(int id)
+        {
+            tblProveedor provider = context.tblProveedor.FirstOrDefault(x => x.IDProveedor == id);
+
+            CEntProveedor pro = new CEntProveedor();
+
+            if (provider != null)
+            {
+                pro.IDProveedor = provider.IDProveedor;
+                pro.NombNegocio = provider.NombNegocio;
+                pro.Direccion = provider.Direccion;
+                pro.Telefono = provider.Telefono;
+                pro.Correo = provider.Correo;
+                pro.Fax = provider.Fax;
+                pro.Municipio = provider.Municipio;
+                pro.Departamento = provider.Departamento;
+                pro.Imagen = provider.Imagen;
+                pro.Estado = provider.Estado;
+            }
+
+            return pro;
+        }
+        #endregion
+
+        #region Dar de baja proveedor 
+        public bool bajaProveedor(int id)
+        {
+            tblProveedor pro = context.tblProveedor.FirstOrDefault(x => x.IDProveedor == id);
+
+            pro.Estado = false;
+
+            context.SaveChanges();
+
+            return true;
+        }
+        #endregion
+
+        #region Dar de alta proveedor
+        public bool altaProveedor(int id)
+        {
+            tblProveedor pro = context.tblProveedor.FirstOrDefault(x => x.IDProveedor == id);
+
+            pro.Estado = true;
+
+            context.SaveChanges();
+
+            return true;
+        }
+        #endregion
+
+        #region Muestra proveedores inactivos
+        public List<CEntProveedor> MuestraProveedoresInactivos()
+        {
+            var Consulta = (from pro in context.tblProveedor
+                            where pro.Estado == false
+                            orderby pro.Estado descending
+                            select new CEntProveedor
+                            {
+                                IDProveedor = pro.IDProveedor,
+                                NombNegocio = pro.NombNegocio,
+                                Direccion = pro.Direccion,
+                                Telefono = pro.Telefono,
+                                Correo = pro.Correo,
+                                Fax = pro.Fax,
+                                Municipio = pro.Municipio,
+                                Departamento = pro.Departamento,
+                                Imagen = pro.Imagen,
+                                Estado = pro.Estado
+                            }).ToList();
+
+            return Consulta;
+        }
+        #endregion
+
+        #region Muestra Categorias Activas Por Nombre
+        public List<CEntProveedor> MuestraProveedoresxNombre(string nombre)
+        {
+            var Consulta = (from pro in context.tblProveedor
+                            where pro.NombNegocio.Contains(nombre)
+                            select new CEntProveedor
+                            {
+                                IDProveedor = pro.IDProveedor,
+                                NombNegocio = pro.NombNegocio,
+                                Direccion = pro.NombNegocio,
+                                Telefono = pro.Telefono,
+                                Correo = pro.Correo,
+                                Fax = pro.Fax,
+                                Municipio = pro.Municipio,
+                                Departamento = pro.Departamento,
+                                Imagen = pro.Imagen,
+                                Estado = pro.Estado
+                            }).ToList();
+            return Consulta;
         }
         #endregion
     }
