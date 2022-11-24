@@ -1,5 +1,10 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="PageCategoria.aspx.cs" Inherits="SistemaISLAGO.Catálogos.PageCategoria" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
+    <script>
+        <%--$(function () {
+            $('#<%=FileUpload%>')
+        })--%>
+    </script>
     <style>
         .aki{
             height: 230px;
@@ -60,6 +65,7 @@
                 </div>  
             </div>
             <br />
+            
         </asp:View>
         
         <asp:View ID="VistaAgregarCategoria" runat="server">
@@ -74,7 +80,7 @@
                     <asp:Button ID="btnReturn" OnClick="btnReturn_Click" runat="server" Text="Categorias Recientes" style="padding: 5px; background: #5cb85c; color: white; border-style: none; border-radius: 5px;"/>
                 </div>
                 <div class="col-md-2">
-                    <asp:Button ID="btnInactivos" runat="server" Text="Categorias Inactivas" style="padding: 5px; background: #06c3e5; color: white; border-style: none; border-radius: 5px;" />
+                    <asp:Button ID="btnInactivos" OnClick="btnInactivos_Click" runat="server" Text="Categorias Inactivas" style="padding: 5px; background: #06c3e5; color: white; border-style: none; border-radius: 5px;" />
                 </div>
             </div>
 
@@ -94,12 +100,65 @@
                     <asp:Button ID="btnReturn1" OnClick="btnReturn_Click" runat="server" Text="Categorias Recientes" style="padding: 5px; background: #5cb85c; color: white; border-style: none; border-radius: 5px;"/>
                 </div>
                 <div class="col-md-2">
-                    <asp:Button ID="btnInactivos1" runat="server" Text="Categorias Inactivas" style="padding: 5px; background: #06c3e5; color: white; border-style: none; border-radius: 5px;" />
+                    <asp:Button ID="btnInactivos1" OnClick="btnInactivos_Click" runat="server" Text="Categorias Inactivas" style="padding: 5px; background: #06c3e5; color: white; border-style: none; border-radius: 5px;" />
                 </div>
             </div>
 
+            <%-- Vista de datos en la GRID --%>
+            <asp:GridView ID="GridViewCategoria"
+                CssClass="table table-bordered" AllowPaging="true" OnRowCommand="GridViewCategoria_RowCommand" OnDataBound="GridViewCategoria_DataBound" PageSize="7"
+                runat="server" DataKeysNames="IDCategoria" AutoGenerateColumns="false">
+                <HeaderStyle BackColor="#69ed7" />
+                <Columns>
+                    <asp:BoundField HeaderText="Categoria" DataField="NombreCategoria" />
+                    <asp:TemplateField HeaderText="Editar">
+                        <ItemTemplate>
+                            <asp:Button ID="btnEditar" CommandName="cmdEditar" CssClass="btn btn-info" runat="server" Text="Editar" />
+                        </ItemTemplate>
+                    </asp:TemplateField>
+                    <asp:TemplateField HeaderText="Inhabilitar">
+                        <ItemTemplate>
+                            <asp:Button ID="btnInhabilitar" CommandNage="cmdInhabilitar" CssClass="btn btn-dager" runat="server" Text="Inhabilitar" />
+                        </ItemTemplate>
+                    </asp:TemplateField>
+                </Columns>
+                <PagerTemplate>
+                    <div class="row" style="margin-top: 20px;">
+                        <div class="col-lg-4"></div>
+                        <div class="col-lg-1" style="text-align: right;">
+                            <h3>
+                                <asp:Label ID="lblPaginaMedidas" runat="server" Text="Página:" CssClass="label label-info"></asp:Label>
+                            </h3>
+                        </div>
+                        <div class="col-lg-1" style="text-align: left;">
+                            <br />
+                            <asp:DropDownList ID="DropCate"  Width="70px" AutoPostBack="true" OnSelectedIndexChanged="DropCate_SelectedIndexChanged" CssClass="form-control" runat="server"></asp:DropDownList>
+                        </div>
+                        <div class="col-lg-2" style="text-align: right;">
+                            <h3>
+                                <asp:Label ID="lblCatePageOf" CssClass="label label-warning" runat="server"></asp:Label></h3>
+                        </div>
+                        <div class="col-lg-4"></div>
+                    </div>
+                </PagerTemplate>
+            </asp:GridView>
+        </asp:View>
+
+        <asp:View runat="server" ID="VistaCatInactivas">
+            <div class="tab-pane" style="background: #311b92; color: white; border-radius: 5px; margin-top: 800px;">
+                <center>
+                    <h1><span class="glyphicon glyphicon-bell"></span>Listado Categorias Inavilitadas<span class="glyphicon glyphicon-bell"></span></h1>
+                </center>
+            </div>
+            <div class="col-md-12">
+                <div class="col-md-2" style="margin-left: 950px">
+                    <asp:Button ID="btnReturn2" OnClick="btnReturn_Click" runat="server" Text="Categorias Recientes" style="padding: 5px; background: #5cb85c; color: white; border-style: none; border-radius: 5px;"/>
+                </div>
+            </div>
         </asp:View>
     </asp:MultiView>
     <%--<hr />--%>
+    <br />
+    <br />
     
 </asp:Content>

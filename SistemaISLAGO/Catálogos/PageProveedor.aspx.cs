@@ -16,5 +16,10 @@ namespace SistemaISLAGO.Catálogos
                 MVProveedor.ActiveViewIndex = 0;
             }
         }
+
+        protected void BotonAgre_Click(object sender, EventArgs e)
+        {
+            MVProveedor.ActiveViewIndex = 1;
+        }    
     }
 }

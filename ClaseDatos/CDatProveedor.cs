@@ -116,7 +116,7 @@ namespace ClaseDatos
             return consulta;
 
         }
-        #endregion
+        #endregion 
 
         #region Muestra proveedores por ID 
         public CEntProveedor MuestraProveedoresxID(int id)
@@ -209,7 +209,7 @@ namespace ClaseDatos
                                 Municipio = pro.Municipio,
                                 Departamento = pro.Departamento,
                                 Imagen = pro.Imagen,
-                                Estado = pro.Estado
+                                Estado = pro.Estado,
                             }).ToList();
             return Consulta;
         }

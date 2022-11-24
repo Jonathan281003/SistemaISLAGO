@@ -33,12 +33,21 @@ namespace SistemaISLAGO.Catálogos
         protected global::System.Web.UI.WebControls.View VistaListadoPro;
 
         /// <summary>
-        /// Control VistaEdicionPro.
+        /// Control BotonAgre.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.View VistaEdicionPro;
+        protected global::System.Web.UI.WebControls.Button BotonAgre;
+
+        /// <summary>
+        /// Control VistaAg_pro.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.View VistaAg_pro;
     }
 }
