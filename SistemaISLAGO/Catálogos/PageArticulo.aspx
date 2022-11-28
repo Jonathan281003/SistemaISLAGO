@@ -161,7 +161,7 @@
 
                             </div>
                             
-                            <!-- fila 2 -->
+                            <!-- fila 2 --> 
                             <div class="col-md-12">
                                 <div class="col-md-1"></div>
                                 <div class="col-md-3">

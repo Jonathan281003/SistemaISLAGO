@@ -133,6 +133,36 @@ namespace SistemaISLAGO.Catálogos
         protected void btnInactivos_Click(object sender, EventArgs e)
         {
             MVCategorias.ActiveViewIndex = 3;
-        }                
+        }
+
+        protected void btnBuscarActivos_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void btnIrlista_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void btnGuardar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void btnActualizar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void btnCanActu_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void btnActivos_Click(object sender, EventArgs e)
+        {
+            MVCategorias.ActiveViewIndex = 2;
+        }
     }
 }
