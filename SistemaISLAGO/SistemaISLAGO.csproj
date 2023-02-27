@@ -124,7 +124,7 @@
     <Content Include="Content\css\font-awesome.css" />
     <Content Include="Content\css\font-awesome.min.css" />
     <Content Include="Content\css\ISLAGO.css" />
-    <Content Include="Content\css\venta.css" />
+    <Content Include="Content\css\MISLAGO_01.css" />
     <Content Include="Content\img\Ayuda.png" />
     <Content Include="Content\img\caja.png" />
     <Content Include="Content\img\Calendario.png" />

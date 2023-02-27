@@ -23,12 +23,12 @@ body {
     margin: auto;
 }
 
-    .menu_superior li a {
+    /*.menu_superior li a {
         text-decoration: none;
         color: white;
         padding: 20px;
         display: block;
-    }
+    }*/
 
     .menu_superior li {
         display: inline-block;
@@ -59,26 +59,9 @@ body {
     
 }
 
-.bar_login {
-    width: 14%;
-    height: 90px;
-    float: left;
-    padding: 15px;
-    background: #000070;
-    border-style: solid;
-    margin-top: -17px;
-    /*border: 1px solid black;*/
-}
 
-    .bar_login img {
-        margin-top: -10px;
-        float: left;
-    }
 
-h5, h6 {
-    margin-top: 10px;
-    color: white;
-}
+
 
 @font-face {
     font-family: 'eras-bold-itc';

@@ -52,60 +52,69 @@
     <Compile Include="CDatArtículo.cs" />
     <Compile Include="CDatCategoria.cs" />
     <Compile Include="CDatProveedor.cs" />
+    <Compile Include="MISLAGO_01.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MISLAGO_01.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MISLAGO_01.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MISLAGO_01.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MISLAGO_01.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MISLAGO_01.edmx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="SISLAGOP_01.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>SISLAGOP_01.Context.tt</DependentUpon>
+    <Compile Include="sp_helpdiagramdefinition_Result.cs">
+      <DependentUpon>MISLAGO_01.tt</DependentUpon>
     </Compile>
-    <Compile Include="SISLAGOP_01.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>SISLAGOP_01.tt</DependentUpon>
+    <Compile Include="sp_helpdiagrams_Result.cs">
+      <DependentUpon>MISLAGO_01.tt</DependentUpon>
     </Compile>
-    <Compile Include="SISLAGOP_01.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>SISLAGOP_01.edmx</DependentUpon>
+    <Compile Include="sysdiagrams.cs">
+      <DependentUpon>MISLAGO_01.tt</DependentUpon>
     </Compile>
     <Compile Include="Table_1.cs">
-      <DependentUpon>SISLAGOP_01.tt</DependentUpon>
+      <DependentUpon>MISLAGO_01.tt</DependentUpon>
     </Compile>
     <Compile Include="tblArticulo.cs">
-      <DependentUpon>SISLAGOP_01.tt</DependentUpon>
+      <DependentUpon>MISLAGO_01.tt</DependentUpon>
     </Compile>
     <Compile Include="tblCategoria.cs">
-      <DependentUpon>SISLAGOP_01.tt</DependentUpon>
+      <DependentUpon>MISLAGO_01.tt</DependentUpon>
     </Compile>
     <Compile Include="tblDetFactura.cs">
-      <DependentUpon>SISLAGOP_01.tt</DependentUpon>
+      <DependentUpon>MISLAGO_01.tt</DependentUpon>
     </Compile>
     <Compile Include="tblDetFacturaTMP.cs">
-      <DependentUpon>SISLAGOP_01.tt</DependentUpon>
+      <DependentUpon>MISLAGO_01.tt</DependentUpon>
     </Compile>
     <Compile Include="tblEmpleado.cs">
-      <DependentUpon>SISLAGOP_01.tt</DependentUpon>
+      <DependentUpon>MISLAGO_01.tt</DependentUpon>
     </Compile>
     <Compile Include="tblFactura.cs">
-      <DependentUpon>SISLAGOP_01.tt</DependentUpon>
+      <DependentUpon>MISLAGO_01.tt</DependentUpon>
     </Compile>
     <Compile Include="tblProveedor.cs">
-      <DependentUpon>SISLAGOP_01.tt</DependentUpon>
+      <DependentUpon>MISLAGO_01.tt</DependentUpon>
     </Compile>
     <Compile Include="tblUsuario.cs">
-      <DependentUpon>SISLAGOP_01.tt</DependentUpon>
+      <DependentUpon>MISLAGO_01.tt</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.Config" />
-    <None Include="packages.config" />
-    <EntityDeploy Include="SISLAGOP_01.edmx">
+    <EntityDeploy Include="MISLAGO_01.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>SISLAGOP_01.Designer.cs</LastGenOutput>
+      <LastGenOutput>MISLAGO_01.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <None Include="SISLAGOP_01.edmx.diagram">
-      <DependentUpon>SISLAGOP_01.edmx</DependentUpon>
+    <None Include="MISLAGO_01.edmx.diagram">
+      <DependentUpon>MISLAGO_01.edmx</DependentUpon>
     </None>
+    <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
@@ -117,15 +126,15 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="SISLAGOP_01.Context.tt">
+    <Content Include="MISLAGO_01.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>SISLAGOP_01.edmx</DependentUpon>
-      <LastGenOutput>SISLAGOP_01.Context.cs</LastGenOutput>
+      <DependentUpon>MISLAGO_01.edmx</DependentUpon>
+      <LastGenOutput>MISLAGO_01.Context.cs</LastGenOutput>
     </Content>
-    <Content Include="SISLAGOP_01.tt">
+    <Content Include="MISLAGO_01.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>SISLAGOP_01.edmx</DependentUpon>
-      <LastGenOutput>SISLAGOP_01.cs</LastGenOutput>
+      <DependentUpon>MISLAGO_01.edmx</DependentUpon>
+      <LastGenOutput>MISLAGO_01.cs</LastGenOutput>
     </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

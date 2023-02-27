@@ -8,11 +8,11 @@ using System.Threading.Tasks;
 using CapaEntidad;
 
 namespace ClaseDatos
-{
+{       
     public class CDatCategoria
     {
         //Instancia para llamar la base de datos
-        BDLago_01Entities2 context = new BDLago_01Entities2();
+        BDLago_01Entities context = new BDLago_01Entities();
 
         #region C >> Create >> Insertar
         public bool GuardaNuevaCategoria(CEntCategoria nuevo)

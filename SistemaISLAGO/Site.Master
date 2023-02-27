@@ -21,6 +21,7 @@
     <%--<link rel="stylesheet" href="~/Content/css/venta.css">--%>
     <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
     <link href="Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="Content/css/MISLAGO_01.css" rel="stylesheet" />
 
 </head>
 <body>
@@ -52,15 +53,15 @@
 
             <div class="menu_superior-todo">
                 <nav>
-                    <div class="bar_login" style="height:105px; background: #000063; border: none;" >
+                    <div class="bar_login" style="height:50px; background: #000063; border: none;" >
                         <a href="../default.aspx">
-                            <img src="../Content/img/LAGOlogo.png" alt="" width="90px" height="80px" style="margin-top:5px"></a>
-                        <h5 style="color: aliceblue; margin-top:30px;">Example@example</h5>
+                            <img src="../Content/img/LAGOlogo.png" alt="" width="65px" height="55px" style="margin-top:2px;"></a>
+                        <h5 style="color: aliceblue; margin-top: 10px;">Example@example</h5>
                         <h6 style="color: aliceblue">ISLAGO</h6>
                     </div>
 
                     <%-- Reloj Inicio--%>
-                    <div class="reloj navbar-header" style="margin-left:20px; ">
+                    <div class="reloj navbar-header" style="margin-left:40px; margin-top:-12px; width: 140px; ">
                         <script type="text/javascript">
                             function reloj() {
                                 var hoy = new Date();

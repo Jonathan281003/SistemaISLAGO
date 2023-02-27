@@ -25,7 +25,7 @@
             
 
             <!-- ARTICLE NAV -->
-            <div class="tab-pane" style="background-color: #311b92; color: white; border-radius: 5px; margin-top:800px;">
+            <div class="tab-pane" style="background-color: #311b92; color: white; border-radius: 5px; margin-top:480px;">
                 <center>
                     <h1><span class="glyphicon glyphicon-bell"></span>Listado Artículos Disponibles <span class="glyphicon glyphicon-bell"></span></h1>
                 </center>
@@ -112,7 +112,7 @@
                     
                     <div class="col-md-12">
                         <div class="col-md-12">
-                            <div class="col-md-8" style="margin-top: 20px;">
+                            <div class="col-md-8" style="margin-top: 10px;">
                                 <h1 class="abc text-success" style="font-size: 50px;">Nuevo Artículo</h1>
                             </div>
                             
@@ -161,7 +161,7 @@
 
                             </div>
                             
-                            <!-- fila 2 -->
+                            <!-- fila 2 --> 
                             <div class="col-md-12">
                                 <div class="col-md-1"></div>
                                 <div class="col-md-3">
@@ -349,7 +349,7 @@
                                 <asp:TemplateField HeaderText="Restaurar">
                                     <ItemTemplate>
                                         <asp:Button ID="btnrestaurar" CommandName="cmdrestaurar" CssClass="btn btn-info" runat="server" Text="Restaurar" />
-                                    </ItemTemplate>
+                                    </ItemTemplate> 
                                 </asp:TemplateField>
                             </Columns>
                             <PagerTemplate>

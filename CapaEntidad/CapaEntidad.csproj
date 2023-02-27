@@ -44,7 +44,10 @@
   <ItemGroup>
     <Compile Include="CEntArtículo.cs" />
     <Compile Include="CEntCategoria.cs" />
+    <Compile Include="CEntDetalleFactura.cs" />
+    <Compile Include="CEntFactura.cs" />
     <Compile Include="CEntProveedor.cs" />
+    <Compile Include="CEntUsuario.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

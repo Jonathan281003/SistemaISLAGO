@@ -13,10 +13,10 @@ namespace ClaseDatos
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class BDLago_01Entities2 : DbContext
+    public partial class BDLago_01Entities : DbContext
     {
-        public BDLago_01Entities2()
-            : base("name=BDLago_01Entities2")
+        public BDLago_01Entities()
+            : base("name=BDLago_01Entities")
         {
         }
     
@@ -25,11 +25,9 @@ namespace ClaseDatos
             throw new UnintentionalCodeFirstException();
         }
     
-        public DbSet<Table_1> Table_1 { get; set; }
         public DbSet<tblArticulo> tblArticulo { get; set; }
         public DbSet<tblCategoria> tblCategoria { get; set; }
         public DbSet<tblDetFactura> tblDetFactura { get; set; }
-        public DbSet<tblDetFacturaTMP> tblDetFacturaTMP { get; set; }
         public DbSet<tblEmpleado> tblEmpleado { get; set; }
         public DbSet<tblFactura> tblFactura { get; set; }
         public DbSet<tblProveedor> tblProveedor { get; set; }

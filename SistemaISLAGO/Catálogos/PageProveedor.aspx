@@ -3,7 +3,7 @@
     <asp:MultiView ID="MVProveedor" runat="server">
         <asp:View ID="VistaListadoPro" runat="server">
             <!-- SUPPLIER NAV -->
-            <div class="tab-pane" style="background-color: #311b92; color: white; border-radius: 5px; margin-top:800px;">
+            <div class="tab-pane" style="background-color: #311b92; color: white; border-radius: 5px; margin-top:480px;">
                 <center>
                     <h1><span class="glyphicon glyphicon-bell"></span>Listado Contactos de Proveedores <span class="glyphicon glyphicon-bell"></span></h1>
                 </center>

@@ -16,7 +16,7 @@
         <asp:View ID="VistaListadoCat"  runat="server">
             <%-- Banner dedicado a las categoriaas -INICIO --%>
             <!-- CATEGORY NAV -->
-            <div class="tab-pane" style="background-color: #311b92; color: white; border-radius: 5px; margin-top:800px;">
+            <div class="tab-pane" style="background-color: #311b92; color: white; border-radius: 5px; margin-top:480px;">
                 <center>
                     <h1><span class="glyphicon glyphicon-bell"></span>Categorias Agregadas Recientemente al Sistema <span class="glyphicon glyphicon-bell"></span></h1>
                 </center>
@@ -87,20 +87,31 @@
         </asp:View>
 
         <asp:View runat="server" ID="VistaListadoCategorias">
-            <div class="tab-pane" style="background-color: #311b92; color: white; border-radius: 5px; margin-top:800px;">
+            <div class="tab-pane" style="background-color: #311b92; color: white; border-radius: 5px; margin-top:480px;">
                 <center>
                     <h1><span class="glyphicon glyphicon-bell"></span>Listado Categorías Habilitadas<span class="glyphicon glyphicon-bell"></span></h1>
                 </center>
             </div>
             <br />
 
-            <%-- Boton para volver a la pagina principal --%>
+            <%-- Botones retorno e inactivos --%>
             <div class="col-md-12">
                 <div class="col-md-2" style="margin-left: 740px">
                     <asp:Button ID="btnReturn1" OnClick="btnReturn_Click" runat="server" Text="Categorias Recientes" style="padding: 5px; background: #5cb85c; color: white; border-style: none; border-radius: 5px;"/>
                 </div>
                 <div class="col-md-2">
                     <asp:Button ID="btnInactivos1" OnClick="btnInactivos_Click" runat="server" Text="Categorias Inactivas" style="padding: 5px; background: #06c3e5; color: white; border-style: none; border-radius: 5px;" />
+                </div>
+            </div>
+
+            <%-- Buscador de Categorias --%>
+            <div class="col-md-12">
+                <br />
+                <div class="input-group">
+                    <asp:TextBox UD="txtBuscar" placeHolder="Ingrese Categoria que desea buscar!" CssClass="form-control" runat="server"></asp:TextBox>
+                    <span class="input-group-btn">
+                        <asp:Button ID="btnBuscarActivos" OnClick="btnBuscarActivos_Click" CssClass="btn btn-info pull-right" runat="server" Text="Buscar" ValidationGroup="agregar"/>
+                    </span>
                 </div>
             </div>
 
@@ -145,18 +156,146 @@
         </asp:View>
 
         <asp:View runat="server" ID="VistaCatInactivas">
-            <div class="tab-pane" style="background: #311b92; color: white; border-radius: 5px; margin-top: 800px;">
-                <center>
-                    <h1><span class="glyphicon glyphicon-bell"></span>Listado Categorias Inavilitadas<span class="glyphicon glyphicon-bell"></span></h1>
-                </center>
-            </div>
-            <div class="col-md-12">
-                <div class="col-md-2" style="margin-left: 950px">
-                    <asp:Button ID="btnReturn2" OnClick="btnReturn_Click" runat="server" Text="Categorias Recientes" style="padding: 5px; background: #5cb85c; color: white; border-style: none; border-radius: 5px;"/>
+            <div class="container">
+                <div class="row">
+                    <br />
+                    <br />
+                    <div class="col-md-12" style="margin-top: 25px;">
+                        <center><h1 class="text-succes" style="font-size: 50px;">Categorias Inactivas</h1></center>
+                        <div class="col-md-8"></div>
+                        <div class="col-md-2">
+                            <asp:Button ID="btnActivos" OnClick="btnActivos_Click" CssClass="btn btn-info pull-right" runat="server" Text="Categorias Activas" />
+                        </div>
+                        <div class="col-md-12">
+                            <asp:Button ID="btnnew" OnClick="btnnew_Click" CssClass="btn btn-success" runat="server" Text="Agregar Categoria" />
+                        </div>
+                    </div>
                 </div>
             </div>
         </asp:View>
     </asp:MultiView>
+
+    <asp:View runat="server" ID="VistaEdicionCat">
+        <div class="container">
+            <div class="row">
+
+                <div class="col-md-12">
+                    <div class="col-md-12">
+                        <div class="col-md-8" style="margin-top:20px">
+                            <h1 class="abc text-succes" style="font-size: 50px;">Nueva categoria</h1>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <br />
+                        <asp:Button ID="btnIrlista" OnClick="btnIrlista_Click" CssClass="btn btn-success pull-right" runat="server" Text="Ver Lista Categorias" />
+                    </div>
+                    <div class="col-md-12">
+                        <br />
+                        <hr />
+                    </div>
+
+                    <div class="row">
+                        <%-- Fila1 --%>
+                        <div class="col-md-12">
+                            <div class="col-md-1"></div>
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <asp:TextBox ID="txtCodigo" CssClass="form-control" Visible="false" Enabled="false" runat="server"></asp:TextBox>
+                                    <label>Nombre</label>
+                                    <asp:TextBox ID="txtNombre" CssClass="form-control" runat="server"></asp:TextBox>
+                                    <asp:RequiredFieldValidator ID="RequiredFieldValidator1" CssClass="Validation" runat="server" ControlToValidate="txtNombre" ErrorMessage="*El Nombre es necesario" ValidationGroup="guardar"></asp:RequiredFieldValidator>                                    
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <label>Descripcion</label>
+                                        <asp:TextBox ID="txtDescripcion" CssClass="form-control" TextMode="MultiLine" runat="server"></asp:TextBox>
+                                    </div>
+                                </div>
+                                <div class="col-md-1"></div>
+                                <div class="col-md-2">
+                                    <asp:Button ID="btnGuardar" OnClick="btnGuardar_Click" CssClass="btn btn-primary" runat="server" Text="Guardar Articulo" ValidationGroup="Guardar" />
+                                    <br />
+                                    <asp:Button ID="btnActualizar" OnClick="btnActualizar_Click" Visible="false" CssClass="btn btn-warning" runat="server" Text="Actualizar Categoria" />
+                                </div>
+                            </div>
+
+                            <%-- Fila2 --%>
+                            <div class="col-md-12">
+                                <div class="col-md-1"></div>
+                                <div class="col-md-2">
+                                    <asp:Button ID="btnCanActu" OnClick="btnCanActu_Click" visible="false" CssClass="btn btn-danger" runat="server" Text="Cancelar" />
+                                </div>
+                            </div>
+
+                            <%-- Fila3 --%>
+                            <div class="col-md-12">
+                                <br />
+                                <br />
+                            </div>
+                            
+                            <%-- Fila4 --%>
+                            <div class="col-md-12">
+                                <asp:UpdatePanel ID="UpdatePanel1" runat="server">
+                                    <ContentTemplate>
+                                        <div class="col-md-3">
+                                        </div>
+                                        </div>
+                                    </ContentTemplate>
+                                </asp:UpdatePanel>
+                                <div class="col-md-12">
+                                </div>
+                            </div>
+
+                            <%-- Fila5 --%>
+                            <div class="col-md-12">
+                                <br />
+                                <br />
+                            </div>
+
+                            <%-- Fila6 --%>
+                            <div class="col-md-12">
+                                <div class="col-md-1"></div>
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <label>Imagen</label>
+                                        <br />
+                                        <asp:Image ID="Preview" Width="40%" Height="50%" ImageUrl="~/Content/img/Categoría/CategoryDefault.png" runat="server"></asp:Image>
+                                        <asp:HiddenField ID="HiddenField" runat="server" />
+                                        <asp:FileUpload ID="FileUploadCategoria" runat="server" />
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <label>Estado</label>
+                                        <asp:CheckBox ID="chkEstado" Checked="true" runat="server" />
+                                    </div>
+                                </div>
+                                <div class="col-md-3"></div>
+                            </div>
+
+                            <%-- Fila7 --%>
+                            <div class="col-md-12">
+                                <div class="col-md-2"></div>
+                                <div class="col-md-2">
+                                </div>
+                                <div class="col-md-2">
+                                </div>
+                                <div class="col-md-2">
+                                </div>
+                                <div class="col-md-2">
+                                    <asp:Button ID="btnVerCombo" Visible="false" CssClass="btn btn-warning" runat="server" Text="Ver Combo" Enabled="false" />
+                                </div>
+                                <div class="col-md-2"></div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </asp:View>
     <%--<hr />--%>
     <br />
     <br />

@@ -9,12 +9,12 @@
             margin-left: 20px;
         }
     </style>
-    <div class="container" style="margin-top:800px;">
+    <div class="container" style="margin-top:480px;">
         <!-- Banner dedicado a los artículos - INICIO -->
         <!-- PRODUCT NAV -->
         <div class="tab-pane" style="background-color: #311b92; color: white; border-radius: 5px;">
             <center>
-                <h1><span class="glyphicon glyphicon-bell"></span>Artíclos Agregados Recientemente al Sistema<span class="glyphicon glyphicon-bell"></span></h1>
+                <h1><span class="glyphicon glyphicon-bell"></span>Artículos Agregados Recientemente al Sistema<span class="glyphicon glyphicon-bell"></span></h1>
             </center>
         </div>
         <br />
