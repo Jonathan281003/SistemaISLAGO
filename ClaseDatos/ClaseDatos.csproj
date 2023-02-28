@@ -51,6 +51,7 @@
   <ItemGroup>
     <Compile Include="CDatArtículo.cs" />
     <Compile Include="CDatCategoria.cs" />
+    <Compile Include="CDatEmpleado.cs" />
     <Compile Include="CDatProveedor.cs" />
     <Compile Include="MISLAGO_01.Context.cs">
       <AutoGen>True</AutoGen>
