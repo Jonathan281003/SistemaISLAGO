@@ -10,7 +10,7 @@ namespace ClaseDatos
 {
     public class CDatArtículo
     {
-        BDLago_01Entities context = new BDLago_01Entities(); 
+        BDLago_01Entities1 context = new BDLago_01Entities1(); 
 
         //List<CEntArtículo> articulo = new List<CEntArtículo>();
 

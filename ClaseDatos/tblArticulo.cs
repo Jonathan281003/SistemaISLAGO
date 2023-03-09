@@ -35,6 +35,8 @@ namespace ClaseDatos
         public int IDCategoria { get; set; }
         public Nullable<bool> Estado { get; set; }
     
+        public virtual tblCategoria tblCategoria { get; set; }
+        public virtual tblProveedor tblProveedor { get; set; }
         public virtual ICollection<tblDetFactura> tblDetFactura { get; set; }
         public virtual ICollection<tblDetFacturaTMP> tblDetFacturaTMP { get; set; }
     }

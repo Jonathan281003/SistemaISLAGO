@@ -14,6 +14,11 @@ namespace ClaseDatos
     
     public partial class tblProveedor
     {
+        public tblProveedor()
+        {
+            this.tblArticulo = new HashSet<tblArticulo>();
+        }
+    
         public int IDProveedor { get; set; }
         public string NombNegocio { get; set; }
         public string Direccion { get; set; }
@@ -24,5 +29,7 @@ namespace ClaseDatos
         public string Departamento { get; set; }
         public string Imagen { get; set; }
         public Nullable<bool> Estado { get; set; }
+    
+        public virtual ICollection<tblArticulo> tblArticulo { get; set; }
     }
 }

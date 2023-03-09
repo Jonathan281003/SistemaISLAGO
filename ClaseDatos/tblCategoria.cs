@@ -14,10 +14,17 @@ namespace ClaseDatos
     
     public partial class tblCategoria
     {
+        public tblCategoria()
+        {
+            this.tblArticulo = new HashSet<tblArticulo>();
+        }
+    
         public int IDCategoria { get; set; }
         public string NombCategoria { get; set; }
         public string Descripcion { get; set; }
         public string Imagen { get; set; }
         public Nullable<bool> Estado { get; set; }
+    
+        public virtual ICollection<tblArticulo> tblArticulo { get; set; }
     }
 }

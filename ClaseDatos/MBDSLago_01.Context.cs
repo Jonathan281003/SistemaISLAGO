@@ -16,10 +16,10 @@ namespace ClaseDatos
     using System.Data.Objects.DataClasses;
     using System.Linq;
     
-    public partial class BDLago_01Entities : DbContext
+    public partial class BDLago_01Entities1 : DbContext
     {
-        public BDLago_01Entities()
-            : base("name=BDLago_01Entities")
+        public BDLago_01Entities1()
+            : base("name=BDLago_01Entities1")
         {
         }
     

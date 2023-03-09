@@ -140,6 +140,34 @@
           <Property Name="IDEmpleado" Type="int" Nullable="false" />
           <Property Name="Estado" Type="bit" />
         </EntityType>
+        <Association Name="FK_tblArticulo_tblCategoria">
+          <End Role="tblCategoria" Type="Self.tblCategoria" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="tblArticulo" Type="Self.tblArticulo" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tblCategoria">
+              <PropertyRef Name="IDCategoria" />
+            </Principal>
+            <Dependent Role="tblArticulo">
+              <PropertyRef Name="IDCategoria" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tblArticulo_tblProveedor">
+          <End Role="tblProveedor" Type="Self.tblProveedor" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="tblArticulo" Type="Self.tblArticulo" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tblProveedor">
+              <PropertyRef Name="IDProveedor" />
+            </Principal>
+            <Dependent Role="tblArticulo">
+              <PropertyRef Name="IDProveedor" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="FK_tblDetFactura_tblArticulo">
           <End Role="tblArticulo" Type="Self.tblArticulo" Multiplicity="1">
             <OnDelete Action="Cascade" />
@@ -250,6 +278,14 @@
           <EntitySet Name="tblFactura" EntityType="Self.tblFactura" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="tblProveedor" EntityType="Self.tblProveedor" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="tblUsuario" EntityType="Self.tblUsuario" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK_tblArticulo_tblCategoria" Association="Self.FK_tblArticulo_tblCategoria">
+            <End Role="tblCategoria" EntitySet="tblCategoria" />
+            <End Role="tblArticulo" EntitySet="tblArticulo" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tblArticulo_tblProveedor" Association="Self.FK_tblArticulo_tblProveedor">
+            <End Role="tblProveedor" EntitySet="tblProveedor" />
+            <End Role="tblArticulo" EntitySet="tblArticulo" />
+          </AssociationSet>
           <AssociationSet Name="FK_tblDetFactura_tblArticulo" Association="Self.FK_tblDetFactura_tblArticulo">
             <End Role="tblArticulo" EntitySet="tblArticulo" />
             <End Role="tblDetFactura" EntitySet="tblDetFactura" />
@@ -312,6 +348,8 @@
           <Property Name="IDProveedor" Type="Int32" Nullable="false" />
           <Property Name="IDCategoria" Type="Int32" Nullable="false" />
           <Property Name="Estado" Type="Boolean" />
+          <NavigationProperty Name="tblCategoria" Relationship="Self.FK_tblArticulo_tblCategoria" FromRole="tblArticulo" ToRole="tblCategoria" />
+          <NavigationProperty Name="tblProveedor" Relationship="Self.FK_tblArticulo_tblProveedor" FromRole="tblArticulo" ToRole="tblProveedor" />
           <NavigationProperty Name="tblDetFactura" Relationship="Self.FK_tblDetFactura_tblArticulo" FromRole="tblArticulo" ToRole="tblDetFactura" />
           <NavigationProperty Name="tblDetFacturaTMP" Relationship="Self.FK_tblDetFacturaTMP_tblArticulo" FromRole="tblArticulo" ToRole="tblDetFacturaTMP" />
         </EntityType>
@@ -324,6 +362,7 @@
           <Property Name="Descripcion" Type="String" MaxLength="60" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="Imagen" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="Estado" Type="Boolean" />
+          <NavigationProperty Name="tblArticulo" Relationship="Self.FK_tblArticulo_tblCategoria" FromRole="tblCategoria" ToRole="tblArticulo" />
         </EntityType>
         <EntityType Name="tblDetFactura">
           <Key>
@@ -406,6 +445,7 @@
           <Property Name="Departamento" Type="String" MaxLength="35" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="Imagen" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="Estado" Type="Boolean" />
+          <NavigationProperty Name="tblArticulo" Relationship="Self.FK_tblArticulo_tblProveedor" FromRole="tblProveedor" ToRole="tblArticulo" />
         </EntityType>
         <EntityType Name="tblUsuario">
           <Key>
@@ -421,6 +461,34 @@
           <NavigationProperty Name="tblDetFactura" Relationship="Self.FK_tblDetFactura_tblUsuario" FromRole="tblUsuario" ToRole="tblDetFactura" />
           <NavigationProperty Name="tblEmpleado" Relationship="Self.FK_tblUsuario_tblEmpleado" FromRole="tblUsuario" ToRole="tblEmpleado" />
         </EntityType>
+        <Association Name="FK_tblArticulo_tblCategoria">
+          <End Role="tblCategoria" Type="Self.tblCategoria" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="tblArticulo" Type="Self.tblArticulo" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tblCategoria">
+              <PropertyRef Name="IDCategoria" />
+            </Principal>
+            <Dependent Role="tblArticulo">
+              <PropertyRef Name="IDCategoria" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tblArticulo_tblProveedor">
+          <End Role="tblProveedor" Type="Self.tblProveedor" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="tblArticulo" Type="Self.tblArticulo" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tblProveedor">
+              <PropertyRef Name="IDProveedor" />
+            </Principal>
+            <Dependent Role="tblArticulo">
+              <PropertyRef Name="IDProveedor" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="FK_tblDetFactura_tblArticulo">
           <End Role="tblArticulo" Type="Self.tblArticulo" Multiplicity="1">
             <OnDelete Action="Cascade" />
@@ -489,7 +557,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <EntityContainer Name="BDLago_01Entities" annotation:LazyLoadingEnabled="true">
+        <EntityContainer Name="BDLago_01Entities1" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" />
           <EntitySet Name="Table_1" EntityType="Self.Table_1" />
           <EntitySet Name="tblArticulo" EntityType="Self.tblArticulo" />
@@ -500,6 +568,14 @@
           <EntitySet Name="tblFactura" EntityType="Self.tblFactura" />
           <EntitySet Name="tblProveedor" EntityType="Self.tblProveedor" />
           <EntitySet Name="tblUsuario" EntityType="Self.tblUsuario" />
+          <AssociationSet Name="FK_tblArticulo_tblCategoria" Association="Self.FK_tblArticulo_tblCategoria">
+            <End Role="tblCategoria" EntitySet="tblCategoria" />
+            <End Role="tblArticulo" EntitySet="tblArticulo" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tblArticulo_tblProveedor" Association="Self.FK_tblArticulo_tblProveedor">
+            <End Role="tblProveedor" EntitySet="tblProveedor" />
+            <End Role="tblArticulo" EntitySet="tblArticulo" />
+          </AssociationSet>
           <AssociationSet Name="FK_tblDetFactura_tblArticulo" Association="Self.FK_tblDetFactura_tblArticulo">
             <End Role="tblArticulo" EntitySet="tblArticulo" />
             <End Role="tblDetFactura" EntitySet="tblDetFactura" />
@@ -567,7 +643,7 @@
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="BDLago_01ModelStoreContainer" CdmEntityContainer="BDLago_01Entities">
+        <EntityContainerMapping StorageEntityContainer="BDLago_01ModelStoreContainer" CdmEntityContainer="BDLago_01Entities1">
           <EntitySetMapping Name="sysdiagrams">
             <EntityTypeMapping TypeName="BDLago_01Model.sysdiagrams">
               <MappingFragment StoreEntitySet="sysdiagrams">
