@@ -12,7 +12,7 @@ namespace ClaseDatos
     public class CDatCategoria
     {
         //Instancia para llamar la base de datos
-        BDLago_01Entities1 context = new BDLago_01Entities1();
+        BDLago_01Entities2 context = new BDLago_01Entities2();
 
         #region C >> Create >> Insertar
         public bool GuardaNuevaCategoria(CEntCategoria nuevo)

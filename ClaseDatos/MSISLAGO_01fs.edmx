@@ -557,7 +557,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <EntityContainer Name="BDLago_01Entities1" annotation:LazyLoadingEnabled="true">
+        <EntityContainer Name="BDLago_01Entities2" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" />
           <EntitySet Name="Table_1" EntityType="Self.Table_1" />
           <EntitySet Name="tblArticulo" EntityType="Self.tblArticulo" />
@@ -643,7 +643,7 @@
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="BDLago_01ModelStoreContainer" CdmEntityContainer="BDLago_01Entities1">
+        <EntityContainerMapping StorageEntityContainer="BDLago_01ModelStoreContainer" CdmEntityContainer="BDLago_01Entities2">
           <EntitySetMapping Name="sysdiagrams">
             <EntityTypeMapping TypeName="BDLago_01Model.sysdiagrams">
               <MappingFragment StoreEntitySet="sysdiagrams">

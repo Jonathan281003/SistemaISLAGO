@@ -53,67 +53,67 @@
     <Compile Include="CDatCategoria.cs" />
     <Compile Include="CDatEmpleado.cs" />
     <Compile Include="CDatProveedor.cs" />
-    <Compile Include="MBDSLago_01.Context.cs">
+    <Compile Include="MSISLAGO_01fs.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>MBDSLago_01.Context.tt</DependentUpon>
+      <DependentUpon>MSISLAGO_01fs.Context.tt</DependentUpon>
     </Compile>
-    <Compile Include="MBDSLago_01.cs">
+    <Compile Include="MSISLAGO_01fs.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>MBDSLago_01.tt</DependentUpon>
+      <DependentUpon>MSISLAGO_01fs.tt</DependentUpon>
     </Compile>
-    <Compile Include="MBDSLago_01.Designer.cs">
+    <Compile Include="MSISLAGO_01fs.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>MBDSLago_01.edmx</DependentUpon>
+      <DependentUpon>MSISLAGO_01fs.edmx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="sp_helpdiagramdefinition_Result.cs">
-      <DependentUpon>MBDSLago_01.tt</DependentUpon>
+      <DependentUpon>MSISLAGO_01fs.tt</DependentUpon>
     </Compile>
     <Compile Include="sp_helpdiagrams_Result.cs">
-      <DependentUpon>MBDSLago_01.tt</DependentUpon>
+      <DependentUpon>MSISLAGO_01fs.tt</DependentUpon>
     </Compile>
     <Compile Include="sysdiagrams.cs">
-      <DependentUpon>MBDSLago_01.tt</DependentUpon>
+      <DependentUpon>MSISLAGO_01fs.tt</DependentUpon>
     </Compile>
     <Compile Include="Table_1.cs">
-      <DependentUpon>MBDSLago_01.tt</DependentUpon>
+      <DependentUpon>MSISLAGO_01fs.tt</DependentUpon>
     </Compile>
     <Compile Include="tblArticulo.cs">
-      <DependentUpon>MBDSLago_01.tt</DependentUpon>
+      <DependentUpon>MSISLAGO_01fs.tt</DependentUpon>
     </Compile>
     <Compile Include="tblCategoria.cs">
-      <DependentUpon>MBDSLago_01.tt</DependentUpon>
+      <DependentUpon>MSISLAGO_01fs.tt</DependentUpon>
     </Compile>
     <Compile Include="tblDetFactura.cs">
-      <DependentUpon>MBDSLago_01.tt</DependentUpon>
+      <DependentUpon>MSISLAGO_01fs.tt</DependentUpon>
     </Compile>
     <Compile Include="tblDetFacturaTMP.cs">
-      <DependentUpon>MBDSLago_01.tt</DependentUpon>
+      <DependentUpon>MSISLAGO_01fs.tt</DependentUpon>
     </Compile>
     <Compile Include="tblEmpleado.cs">
-      <DependentUpon>MBDSLago_01.tt</DependentUpon>
+      <DependentUpon>MSISLAGO_01fs.tt</DependentUpon>
     </Compile>
     <Compile Include="tblFactura.cs">
-      <DependentUpon>MBDSLago_01.tt</DependentUpon>
+      <DependentUpon>MSISLAGO_01fs.tt</DependentUpon>
     </Compile>
     <Compile Include="tblProveedor.cs">
-      <DependentUpon>MBDSLago_01.tt</DependentUpon>
+      <DependentUpon>MSISLAGO_01fs.tt</DependentUpon>
     </Compile>
     <Compile Include="tblUsuario.cs">
-      <DependentUpon>MBDSLago_01.tt</DependentUpon>
+      <DependentUpon>MSISLAGO_01fs.tt</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.Config" />
-    <EntityDeploy Include="MBDSLago_01.edmx">
+    <EntityDeploy Include="MSISLAGO_01fs.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>MBDSLago_01.Designer.cs</LastGenOutput>
+      <LastGenOutput>MSISLAGO_01fs.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <None Include="MBDSLago_01.edmx.diagram">
-      <DependentUpon>MBDSLago_01.edmx</DependentUpon>
+    <None Include="MSISLAGO_01fs.edmx.diagram">
+      <DependentUpon>MSISLAGO_01fs.edmx</DependentUpon>
     </None>
     <None Include="packages.config" />
   </ItemGroup>
@@ -127,15 +127,15 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="MBDSLago_01.Context.tt">
+    <Content Include="MSISLAGO_01fs.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>MBDSLago_01.edmx</DependentUpon>
-      <LastGenOutput>MBDSLago_01.Context.cs</LastGenOutput>
+      <DependentUpon>MSISLAGO_01fs.edmx</DependentUpon>
+      <LastGenOutput>MSISLAGO_01fs.Context.cs</LastGenOutput>
     </Content>
-    <Content Include="MBDSLago_01.tt">
+    <Content Include="MSISLAGO_01fs.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>MBDSLago_01.edmx</DependentUpon>
-      <LastGenOutput>MBDSLago_01.cs</LastGenOutput>
+      <DependentUpon>MSISLAGO_01fs.edmx</DependentUpon>
+      <LastGenOutput>MSISLAGO_01fs.cs</LastGenOutput>
     </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
